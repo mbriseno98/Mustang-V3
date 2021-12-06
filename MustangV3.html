@@ -1,0 +1,56 @@
+<!--
+    Author:  Marcel Briseno
+    Class:   Web & Distributed Programming 
+    Project: Mustang Version 3
+    Session: su18-cpsc-24700-lt1
+    Description: Mustang Version 3.
+    Credit: This Mustang Version 3 uses source code from Professor Pogue's example repo on github 
+    and it also utilizes parts of Vincent's Mustang 3 
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Mustang2</title>
+    <link rel="stylesheet" href="mustangv3.css">
+    <script src="mustangV3.js"></script>
+</head>
+<body onload="initApplication()">
+   
+    <form autocomplete="off" onclick="showLookup()">
+        <div class="autocomplete">
+            <input id="myInput" type="search" placeholder="Search" ><br><br>
+        </div>
+    </form>
+    <h1 class="autocomplete">Mustang</h1>
+    <h2 class="autocomplete">3</h2>
+    <table class>
+            <div class = autocomplete>
+                
+                <input id="nameID" type="text" value="" size="20" placeholder="Name">
+
+                <input id="emailID" type="text" value="" size="20" placeholder="Email">
+
+                <input id="cityID" type="text" value="" size="20" placeholder="City">
+
+                <input id="stateID" type="text" value="" size="20" onkeypress="keyPressed()"placeholder="State">
+
+                <input id="zipID" type="text" value="" size="20" onfocus="autoFill()" onblur="autoFill()" placeholder="Zip">
+
+               
+
+                <button type="button" autofocus onclick="next()">Next</button>
+                <button type="button" onclick="previous()">Previous</button>
+                <button type="button" onclick="newContact()">New</button>
+                <button type="button" onclick="removeContact()">Delete</button>
+                <button type="button" onclick="saveContactsToServer()">Save</button>
+                <p id="statusID"></p>
+            </div>
+        </table>
+    <br><br><hr>
+    <button type="button" onclick="index()">Load New</button>
+    <button type="button" onclick="loadContactsFromServer()">Load Previous</button>
+    <p id=warning></p>
+    List Of Contacts:<pre id="contactsID"></pre>
+
+    
+</body>
+</html>
